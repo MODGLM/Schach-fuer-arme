@@ -10,7 +10,7 @@ canvas.pack()
 #Horizontal
 position = 0
 for x in range(12):
-    if x == 1:
+    if x == 0:
         position+=40
     elif x == 10:
         position += 40
@@ -24,7 +24,7 @@ canvas.create_line(0,880,880,880)
 #Vertikal
 position = 0
 for x in range(12):
-    if x == 1:
+    if x == 0:
         position+=40
     elif x == 10:
         position += 40
@@ -42,88 +42,24 @@ canvas.create_line(880,0,880,880)
 #bg = der Hintergrund der Schrifft
 #Quelle https://www.youtube.com/watch?v=l7ezyYD6V68
 
-#Zahlen
-#wäre mit Schleife halt schon cool von andern Stern
-label_8_Links = Label(canvas, text="8", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_8_Rechts = Label(canvas, text="8", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_8_Links.place(x=12,y=77)
-label_8_Rechts.place(x=852,y=77)
+def Createletter():
+    Buchstaben = 65
+    PosX = 90
+    PosY = 20
+    PosY2 = 860
+    for z in range (8):
+        canvas.create_text(PosX + z * 100, PosY, text = chr((Buchstaben + z)),fill='white', font=("Arial",15,"bold"))
+        canvas.create_text(PosX + z * 100, PosY2, text= chr((Buchstaben + z)),fill='white', font=("Arial",15,"bold"))
+Createletter()
 
-label_7_Links = Label(canvas, text="7", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_7_Rechts = Label(canvas, text="7", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_7_Links.place(x=12,y=177)
-label_7_Rechts.place(x=852,y=177)
-
-label_6_Links = Label(canvas, text="6", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_6_Rechts = Label(canvas, text="6", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_6_Links.place(x=12,y=277)
-label_6_Rechts.place(x=852,y=277)
-
-label_5_Links = Label(canvas, text="5", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_5_Rechts = Label(canvas, text="5", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_5_Links.place(x=12,y=377)
-label_5_Rechts.place(x=852,y=377)
-
-label_4_Links = Label(canvas, text="4", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_4_Rechts = Label(canvas, text="4", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_4_Links.place(x=12,y=477)
-label_4_Rechts.place(x=852,y=477)
-
-label_3_Links = Label(canvas, text="3", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_3_Rechts = Label(canvas, text="3", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_3_Links.place(x=12,y=577)
-label_3_Rechts.place(x=852,y=577)
-
-label_2_Links = Label(canvas, text="2", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_2_Rechts = Label(canvas, text="2", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_2_Links.place(x=12,y=677)
-label_2_Rechts.place(x=852,y=677)
-
-label_1_Links = Label(canvas, text="1", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_1_Rechts = Label(canvas, text="1", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_1_Links.place(x=12,y=777)
-label_1_Rechts.place(x=852,y=777)
-
-#Buchstaben
-label_A_Oben = Label(canvas, text="A", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_A_Unten = Label(canvas, text="A", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_A_Oben.place(x=80,y=7)
-label_A_Unten.place(x=80,y=847)
-
-label_B_Oben = Label(canvas, text="B", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_B_Unten = Label(canvas, text="B", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_B_Oben.place(x=180,y=7)
-label_B_Unten.place(x=180,y=847)
-
-label_C_Oben = Label(canvas, text="C", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_C_Unten = Label(canvas, text="C", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_C_Oben.place(x=280,y=7)
-label_C_Unten.place(x=280,y=847)
-
-label_D_Oben = Label(canvas, text="D", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_D_Unten = Label(canvas, text="D", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_D_Oben.place(x=380,y=7)
-label_D_Unten.place(x=380,y=847)
-
-label_E_Oben = Label(canvas, text="E", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_E_Unten = Label(canvas, text="E", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_E_Oben.place(x=480,y=7)
-label_E_Unten.place(x=480,y=847)
-
-label_F_Oben = Label(canvas, text="F", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_F_Unten = Label(canvas, text="F", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_F_Oben.place(x=580,y=7)
-label_F_Unten.place(x=580,y=847)
-
-label_G_Oben = Label(canvas, text="G", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_G_Unten = Label(canvas, text="G", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_G_Oben.place(x=680,y=7)
-label_G_Unten.place(x=680,y=847)
-
-label_H_Oben = Label(canvas, text="H", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_H_Unten = Label(canvas, text="H", font=("Arial",15,"bold"),fg="white",bg="#666676")
-label_H_Oben.place(x=780,y=7)
-label_H_Unten.place(x=780,y=847)
+def CreateNumber():
+    Posx = 20
+    Posx2 = 860
+    Posy = 90
+    for a in range (8):
+        canvas.create_text(Posx2, Posy + a * 100, text= (1 + a), fill='white', font=("Arial", 15, "bold"))
+        canvas.create_text(Posx, Posy + a * 100, text= (1 + a), fill='white', font=("Arial", 15, "bold"))
+CreateNumber()
 
 Player1 = 0
 Player2 = 0
@@ -195,6 +131,14 @@ def checkIfFieldIsBesetzt(angeclicktesFeld):
     else:
         print("Besetzt.")
 """""
+
+def DrawBoard():
+    colorList = ["white", "#666676"]
+    for x in range (8):
+        for y in range (8):
+            canvas.create_rectangle(40 + x*100, 40 +y*100, 140 + x*100, 140 +y*100, fill=colorList[(x+y)%2])
+
+DrawBoard()
 
 canvas.bind("<Button-1>",coords)
 
