@@ -143,3 +143,5 @@ DrawBoard()
 canvas.bind("<Button-1>",coords)
 
 root.mainloop()
+
+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
